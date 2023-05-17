@@ -16,57 +16,6 @@
         }
       }
 
-      // function loadJSResources(resourceURLs, callback) {
-      //   let resourcesToLoad = resourceURLs.length;
-
-      //   for (let i = 0; i < resourcesToLoad; i++) {
-      //     const g = document.createElement("script");
-      //     g.type = "text/javascript";
-      //     g.async = true;
-      //     g.defer = true;
-      //     g.src = resourceURLs[i];
-      //     g.onload = () => {
-      //       resourcesToLoad--;
-      //       if (resourcesToLoad === 0) {
-      //         callback();
-      //       }
-      //     };
-      //     const s = document.getElementsByTagName("script")[0];
-      //     s.parentNode.insertBefore(g, s);
-      //   }
-      // }
-
-      // onDOMReady(function () {
-      //   function onLoadSDK() {
-      //     console.log("called onSDKLoad");
-      //     var token = "QA";
-      //     var configVersion = "AdditionalWeb.1.0.2";
-
-      //     self.optimoveSDK.initialize(
-      //       token,
-      //       configVersion,
-      //       onSDKInitialized,
-      //       "info"
-      //     );
-      //   }
-
-      //   function onSDKInitialized(status) {
-      //     console.log(`testing my call back status = ${status}`);
-
-      //     let url = self.document.location.href;
-      //     let host = self.document.location.origin;
-      //     let splited = url.split(host);
-      //     let pageName = splited[1];
-      //     let pageTitle = pageName.slice(1, pageName.length);
-      //     if (pageTitle == "") pageTitle = "Home - Hackathon Starter";
-
-      //     //self.optimoveSDK.API.setPageVisit('http://www.example.com' + pageName, pageTitle);
-      //   }
-
-      //   //loadJSResources(['/sdk-qa.js'], onLoadSDK); -- to load optimoveTenantConfiguration from web
-      //   loadJSResources(["/sdk-qa.js", "/config.js"], onLoadSDK);
-      // });
-
       function setPageVisit() {
         self.optimoveSDK.API.setPageVisit(location.href, document.title);
       }
@@ -113,17 +62,7 @@
     <!-- <script async src="/sdk-qa.js" data-optimove-service-worker-path="/optimove-scoped-sw/sub-path/myFancyWorker.js"></script> -->
     <script>
       (function(w,p){w[p]=w[p]||function(){w[p].q=w[p].q||[];w[p].q.push(arguments)}})(window,"Kumulos");
-      
-      // Staples A creds & VAPID key
-      // Kumulos("init", {
-      //     apiKey: "03b07d62-170d-4930-9926-21e01a56f0a8",
-      //     secretKey: "OatqKogVuXciwnKpH+MQMpshxg+JKzh9fQaJ",
-      //     vapidPublicKey: "BHSlbPLzKDZTWVEXtHTGwBi_foJyX6-GgCJM8f0sNPAIP5NRWGdRVYITVzJ1KGJGUI02obaz-Aa3ys1TNDbXujk",
-      //     serviceWorkerPath: '/optimove-worker.js',
-      //     region: 'eu-central-1'
-      // });
 
-      // 
       Kumulos("init", {
           apiKey: "a599198a-2930-4845-aafc-b93c2de8710b",
           secretKey: "scDsBktbGtjWiD+XaZP/3+wavnzKfj92Szv1",
